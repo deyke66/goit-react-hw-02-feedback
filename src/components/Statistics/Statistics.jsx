@@ -1,5 +1,6 @@
-export const Statistics = props => {
-  const { good, neutral, bad, total, positive } = props;
+import PropTypes from 'prop-types';
+
+export const Statistics = ({ good, neutral, bad, total, positive }) => {
   return (
     <section>
       <h3>Statistics</h3>
@@ -16,4 +17,12 @@ export const Statistics = props => {
       )}
     </section>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positive: PropTypes.number,
 };

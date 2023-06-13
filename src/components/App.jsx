@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import {Statistics} from './Statistics/Statistics';
+import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './Feeedback/FeedbackOptions';
 
 export class App extends Component {
@@ -26,11 +26,10 @@ export class App extends Component {
   };
 
   render() {
-    const {good, neutral, bad, total, positive} = this.state
+    const { good, neutral, bad, total, positive } = this.state;
     return (
       <div
         style={{
-          height: '100vh',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -38,11 +37,16 @@ export class App extends Component {
           color: '#010101',
         }}
       >
-        <section title=''>
+        <section title="">
           <FeedbackOptions onLeaveFeedback={this.handlerClick} />
-          <Statistics good={good} neutral={neutral} bad={bad} total={total} positive={positive} />
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={total}
+            positive={positive}
+          />
         </section>
-        
       </div>
     );
   }
